@@ -16,9 +16,7 @@ const Header:FC<HeaderProps> = ({ showDashboardLink = false }) => {
       <nav className="space-x-4">
         <Link href="/">Home</Link>
         {showDashboardLink && <Link href="/dashboard">Dashboard</Link>}
-        {/* <Link href="/login">Log In</Link> */}
         {token ? <LogOut /> : <Link href="/login">Log In</Link>}
-        <Link href="/aboutUs">About Us</Link>
       </nav>
     </header>
   );
