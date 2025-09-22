@@ -6,12 +6,12 @@ export const middleware = async (request:NextRequest) => {
  if(request.nextUrl.pathname.startsWith('/dashboard') &&!token){
     return NextResponse.redirect(new URL('/login', request.url));
  }
- if(request.nextUrl.pathname.startsWith('/aboutUs')){
-    return NextResponse.rewrite(new URL('/login', request.url));
+ if(request.nextUrl.pathname.startsWith('/dashboard')){
+   //  return NextResponse.rewrite(new URL('/dashboard', request.url));
  }
  return NextResponse.next()
 }
 
 export const config = {
-    matcher:["/dashboard/:path", '/dashboard']
+    matcher:["/dashboard/:path*"]
 }
