@@ -11,7 +11,7 @@ export const handleSubmit = async (formData: FormData) => {
       name: "my-token",
       value: "mySecretToken",
       path: "/",
-      maxAge: 60, //token is out of date after 60 sec
+      maxAge: 600, //token is out of date after 10 min
     });
     redirect("/dashboard");
   }
@@ -19,9 +19,10 @@ export const handleSubmit = async (formData: FormData) => {
 
 const Login = () => {
   return (
-    <form
+    <section className="flex justify-center items-center min-h-screen bg-gray-200">
+      <form
       action={handleSubmit}
-      className="flex flex-col p-3 gap-2 w-72 m-auto  bg-gray-600"
+      className="flex flex-col p-3 gap-4 w-72 m-auto rounded bg-gray-600"
     >
       <input
         type="text"
@@ -42,6 +43,8 @@ const Login = () => {
         Enter
       </button>
     </form>
+    </section>
+    
   );
 };
 

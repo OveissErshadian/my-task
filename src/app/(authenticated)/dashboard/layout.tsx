@@ -4,7 +4,7 @@ import React from "react";
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen">
-        <aside className="w-52 p-5 bg-blue-700">
+        <aside className="w-52 p-5 bg-blue-500">
           <h3 className="text-xl">Dashboard Menu</h3>
           <ul className="underline">
             <li>
